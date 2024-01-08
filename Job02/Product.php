@@ -10,8 +10,9 @@ class Product{
     private ?int $quantity;
     private ?DateTime $createdAt;
     private ?DateTime $updatedAt;
+    private int $category_id;
 
-    public function __construct(int $id = null, string $name = null, array $photos = null, int $price = null, string $description = null, int $quantity = null, DateTime $createdAt = null, DateTime $updatedAt = null){
+    public function __construct($id = null, $name = null, $photos = null, $price = null, $description = null, $quantity = null, $createdAt = null, $updatedAt = null, int $category_id = null){
         $this->id = $id;
         $this->name = $name;
         $this->photos = $photos;
@@ -20,6 +21,7 @@ class Product{
         $this->quantity = $quantity;
         $this->createdAt = $createdAt;
         $this->updatedAt = $updatedAt;
+        $this->category_id = $category_id;
     }
 
     //////////////////////////////////////////// Getters ///////////////////////////////////////////////
@@ -55,6 +57,10 @@ class Product{
         return $this->updatedAt;
     }
 
+    public function getCategoryId(){
+        return $this->category_id;
+    }
+
     /////////////////////////////////////////////////////// Setters  ////////////////////////////////////////////////////////////////////////
     public function setId(int $id){
         $this->id = $id;
@@ -86,6 +92,10 @@ class Product{
 
     public function setUpdatedAt(DateTime $updatedAt){
         $this->updatedAt = $updatedAt;
+    }
+
+    public function setCategoryId(int $category_id){
+        $this->category_id = $category_id;
     }
 
 }
