@@ -8,7 +8,7 @@
         private ?DateTime $createdAt;
         private ?DateTime $updatedAt;
 
-        public function __construct(int $id = null, string $name = null, string $description = null, DateTime $createdAt = null, DateTime $updatedAt = null) {
+        public function __construct(?int $id, ?string $name, ?string $description, ?DateTime $createdAt, ?DateTime $updatedAt) {
             $this->id = $id;
             $this->name = $name;
             $this->description = $description;

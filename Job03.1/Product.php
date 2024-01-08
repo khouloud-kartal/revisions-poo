@@ -10,9 +10,9 @@ class Product{
     private ?int $quantity;
     private ?DateTime $createdAt;
     private ?DateTime $updatedAt;
-    private int $category_id;
+    private ?int $category_id;
 
-    public function __construct(?int $id , ?string $name , ?array $photos , ?int $price, ?string $description, ?int $quantity, ?DateTime $createdAt, ?DateTime $updatedAt, ?int $category_id){
+    public function __construct(?int $id = null, ?string $name = null, ?array $photos = null, ?int $price = null, ?string $description = null, ?int $quantity = null, ?DateTime $createdAt = null, ?DateTime $updatedAt = null, ?int $category_id = null){
         $this->id = $id;
         $this->name = $name;
         $this->photos = $photos;

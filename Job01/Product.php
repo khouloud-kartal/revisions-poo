@@ -11,7 +11,7 @@ class Product{
     private ?DateTime $createdAt;
     private ?DateTime $updatedAt;
 
-    public function __construct(int $id = null, string $name = null, array $photos = null, int $price = null, string $description = null, int $quantity = null, DateTime $createdAt = null, DateTime $updatedAt = null){
+    public function __construct(?int $id , ?string $name , ?array $photos , ?int $price, ?string $description, ?int $quantity, ?DateTime $createdAt, ?DateTime $updatedAt){
         $this->id = $id;
         $this->name = $name;
         $this->photos = $photos;
