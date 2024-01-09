@@ -17,10 +17,9 @@ try{
     echo 'Error:' . $e->getMessage();
 }
 
-var_dump($result);
+$category = new Category(2, 'Test', 'It is a new category', new DateTime(), new DateTime());
 
-$product = new Product($result['id'], $result['name'], json_decode($result['photos']), $result['price'], $result['description'], $result['quantity'], new DateTime($result['createdAt']), new DateTime($result['updatedAt']), $result['categoryId']);
 
-$product2 = new Product();
+var_dump($category->getProducts());
 
 ?>
