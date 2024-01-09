@@ -17,7 +17,7 @@ try{
     echo 'Error:' . $e->getMessage();
 }
 
-$category = new Category(2, 'Test', 'It is a new category', new DateTime(), new DateTime());
+$category = new Category(3, 'Test', 'It is a new category', new DateTime(), new DateTime());
 
 
 var_dump($category->getProducts());
